@@ -1,0 +1,15 @@
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Archives / ZIP files
+*.zip
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
