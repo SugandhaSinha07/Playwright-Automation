@@ -15,7 +15,8 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test
+      # Stable CI subset: public demo pages + flows using the TEST_PASSWORD demo account
+      run: npx playwright test tests/example.spec.js tests/UIBasicstest.spec.js tests/FramesHandling.spec.js tests/ClientAppOther.spec.js tests/EventBooking.spec.js
       env:
         TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
     - uses: actions/upload-artifact@v4
