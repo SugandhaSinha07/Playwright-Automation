@@ -1,7 +1,7 @@
 const{test,expect}=require('@playwright/test');
 test('@Website Client App Login', async ({page})=>
 {   const email="sugandhasinhadiv@gmail.com";
-    const password="Divisha@123";
+    const password=process.env.TEST_PASSWORD;
     page.goto("https://rahulshettyacademy.com/client");
     await page.getByPlaceholder('email@example.com').fill(email);
     await page.getByPlaceholder('enter your passsword').fill(password);
