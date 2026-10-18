@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 const BASE_URL = 'https://eventhub.rahulshettyacademy.com';
 const email = "sugandhasinhadiv@gmail.com";
-const password = "Divisha@123";
+const password = process.env.TEST_PASSWORD;
 const fullName = "John Doe";
 const emailAddress = "john.doe@example.com";
 const phoneNumber = "1234567890";
