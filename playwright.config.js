@@ -13,7 +13,7 @@ export default defineConfig({
   reporter: 'html',
 
   use: {
-    headless: false,
+    headless: !!process.env.CI, // headless on CI, headed locally
     actionTimeout: 10000, // 10 seconds
     navigationTimeout: 30000, // 30 seconds
     screenshot: 'on',
