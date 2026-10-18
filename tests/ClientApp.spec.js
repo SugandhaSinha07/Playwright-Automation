@@ -5,7 +5,7 @@ test.only('Client App Login Test', async ({ page }) => {
     const product_name = "ZARA COAT 3";
     const creditCard=page.locator(".payment__cc input.text-validated");
     const email="sugandhasinhadiv@gmail.com";
-    const password="Divisha@123";
+    const password=process.env.TEST_PASSWORD;
     const products = page.locator(".card-body");
     await page.goto("https://rahulshettyacademy.com/client");
    
