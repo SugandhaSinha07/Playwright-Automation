@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 test('@Website Event Booking', async ({ page }) => {
     
     const email = "sugandhasinhadiv@gmail.com";
-    const password = "Divisha@123";
+    const password = process.env.TEST_PASSWORD;
     const eventTitle = "gBC 12";
     page.goto("https://eventhub.rahulshettyacademy.com/");
     const totalSeats = 100;
