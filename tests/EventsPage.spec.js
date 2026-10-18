@@ -2,7 +2,7 @@ import{test,expect} from'@playwright/test'
 const BASE_URL      = 'https://eventhub.rahulshettyacademy.com'; 
 //Credentials
 const userName="sugandhasinhadiv@gmail.com";
-const password="Divisha@123";
+const password=process.env.TEST_PASSWORD;
 const SIX_EVENT_RESPONSE={
     data:[{ id: 1, title: 'Tech Summit 2025', category: 'Conference', eventDate: '2025-06-01T10:00:00.000Z', venue: 'HICC', city: 'Hyderabad', price: '999', totalSeats: 200, availableSeats: 150, imageUrl: null, isStatic: false },
     { id: 2, title: 'Rock Night Live',  category: 'Concert',    eventDate: '2025-06-05T18:00:00.000Z', venue: 'Palace Grounds', city: 'Bangalore', price: '1500', totalSeats: 500, availableSeats: 300, imageUrl: null, isStatic: false },
