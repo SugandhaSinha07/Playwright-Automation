@@ -2,7 +2,7 @@ const{test,expect}=require('@playwright/test');
 test('Locator Playwright test', async ({page})=>
 {   const slowExpext=expect.configure({timeout: 10000});
 
-    const password='Divisha@123';
+    const password=process.env.TEST_PASSWORD;
     const product_name="Nokia Edge";
     page.goto("https://rahulshettyacademy.com/angularpractice/");
     await page.getByLabel('Check me out if you Love IceCreams!').check();
